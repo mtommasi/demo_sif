@@ -11,7 +11,8 @@ _Exemple de cours rédigé en utilisant la syntaxe MarkDown et suivant la conven
 
 ## Syntaxe pour éditer un contenu de cours Esc@Pad
 
-[video]( https://vimeo.com/93350435 ){: .lien_video } 
+[video]( https://player.vimeo.com/video/93350435 ){: .lien_video } 
+
 Nous détaillons ici la chaine éditoriale adoptée pour la production des modules mis à dispositions sur ce dépôt.  
 Nous utilisons un fichier dit "maitre" comme matrice de base pour générer le cours. La syntaxe employée est basée sur le format **MarkDown**. Vous pourrez observer l'usage de ce format dans la video de cette section de cours. 
 
@@ -71,11 +72,13 @@ qu'on fait passer l'idée de coder/décoder et sa contraction en codec?
 ####b) Lien vers une vidéo d'animation
 Sur le même principe que les *attribute lists* (cf ci-dessus), on spécifie qu'il s'agit d'un lien vers une vidéo en spécifiant la classe `lien_video`:  
 
+```
     [Introduction au web](https://player.vimeo.com/video/138623497){: .lien_video } 
 
 ou  
 
     [Introduction au web](https://player.vimeo.com/video/138623497){: class="lien_video" } 
+```
 
 Ce lien doit être placé à l'intérieur d'une sous-section. Une sous-section peut bien sûr comporter plusieurs vidéos. 
 
