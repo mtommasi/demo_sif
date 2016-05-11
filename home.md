@@ -2,8 +2,6 @@ Patron de départ pour confectionner votre programme de cours avec Esc@Pad
 =========================================================================
 
 
-# Voici les étapes nécessaires pour utiliser Esc@Pad:
-
 ## Créer son programme de cours à partir du présent patron
 
 1. Créez-vous un compte sur un gestionnaire de version de fichier de type 'git' (GitHub, Gitlab, Bitbucket, etc). 
@@ -15,10 +13,11 @@ Patron de départ pour confectionner votre programme de cours avec Esc@Pad
 3. dans le fichier home.md (ce présent fichier), remplacer le texte par le contenu de votre page d'accueil.
 4. pour personnaliser le logo remplacez le fichier `logo.png` par le fichier de votre choix que vous renommerez `logo.png|jpg|gif` en fonction du type d'image utilisée.
 5. enfin, pour personnaliser le titre de votre programme de cours, éditer le fichier `title.md` et, sans le renommer, insérez votre titre en première ligne.
-6. pour générer votre site, rendez-vous sur le site http://escapad.lille3.fr et cliquez sur "Ajouter un dépôt".
+6. pour générer votre site, rendez-vous sur le site http://escapad.univ-lille3.fr et cliquez sur "Ajouter un dépôt".
 7. renseignez les champs "login", "nom du dépot", et "url du dépôt". Validez.
 8. Vous pouvez à présent générer un site vitrine de votre cours en cliquant sur "Générer site". Les archives d'export (IMS, etc) sont disponibles à l'intérieur de ce site.
   
+ 
  
 ## Syntaxe pour éditer un contenu de cours Esc@Pad
 
