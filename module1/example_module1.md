@@ -93,19 +93,10 @@ Ces liens vidéos font l'objet d'un traitement spécifique selon le type d'expor
 ## Comment ajouter des sous-sections `Activités`
 
 Les activités peuvent être de 2 types:
+
 - auto-évaluation: `activité`
 - Exercices d'approfondissement: `activité-avancée`
-Pour le découpage des activités, nous n'utilisons plus les `##` de la syntaxe markdown, mais les "fenced code blocks" en spécifiant le type d'activité  juste à côté des "backticks":
-
-        ```activité
-        ```
-
-ou 
-
-        ```activité-avancée
-        ```
-
-  
+Pour le découpage des activités, nous n'utilisons plus les `##` de la syntaxe markdown, mais les "fenced code blocks" en spécifiant le type d'activité  juste à côté des "backticks" ````activité`
 
 ### Syntaxe GIFT
 
