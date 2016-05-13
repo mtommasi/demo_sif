@@ -1,100 +1,181 @@
-TITLE: Intre base de données
-MENUTITLE: Base de données
+TITLE: Module de cours test 1
+MENUTITLE: Module 1
 AUTHOR: Culture Numérique
 LANGUAGE: fr
 
-# Séance 1. (2x2h) Collecter et Manipuler des données
+_Exemple de cours rédigé en utilisant la syntaxe MarkDown et suivant la convention Esc@Pad permettant de générer un cours complet._
 
-Dans cette séance nous allons aborder la notion de données en explorant tout d'abord le monde de l'open data et des possibilités que cette tendance apporte. Nous aborderons ensuite les premières notions de représentation des données avant d'introduire un outils permettant de les manipuler et de les visualiser.  
-Lien prise de notes collective : https://oae.univ-lille3.fr/content/lille3/Ey6qIPD1g
 
-## Notions de bases
-Une base de données est un dispositif technologique permettant de stocker et récupérer des données brutes. Sur internet, les informations délivrées *aux clients* (votre navigateur) par un *serveur* (ceux de Facebook, Google, Lemonde.fr, Wikipedia.fr, etc.) proviennent toujours d'une base de données:  
-![](http://static.commentcamarche.net/www.commentcamarche.net/pictures/bdd-images-basecs.gif)  
+# Comment utiliser Esc@Pad pour produire un support de cours multi-plateformes
 
- **Intermède participatif** : Les bases de données sont présentes partout. Donner des exemples de domaines d'activités où dont utilisés des DB et pour quel type de données.  
-  
-Cette vision est cependant très schématique, le terme *"base de données"* étant très générique, car les bases de données sont maintenant organisés en des architectures très complexes et distribuées dans ce qu'on appelle le "cloud computing".
 
-Malgré ces évolutions récentes, une base de donnée reste définie par son modèle de données détaillant les liens entre ses éléments à l'aide de "tableaux", exactement comme ceux que vous manipuler dans un logiciel de feuille de calcul. On les appelle plus souvent "tables" dans le jargon. Une table peut représenter par exemple un aspect d'une "entité" du modèle ou une "relation" entre les différentes entités. C'est précisément l'exploitation et la manipulation de ces relations que permettent les bases de données dites "relationnelles", inventées dans les années 70:
+## Syntaxe pour éditer un contenu de cours Esc@Pad
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Relational_key_SVG.svg/300px-Relational_key_SVG.svg.png)  
+[video]( https://player.vimeo.com/video/93350435 ){: .lien_video } 
 
-Tout repose ici sur l'usage d'une "clé unique" qui identifie chaque entité (ici des personnes que l'on décrit à travers différentes tables: une pour l'identité, une autre pour les coordonnées téléphoniques).   
+Nous détaillons ici la chaine éditoriale adoptée pour la production des modules mis à dispositions sur ce dépôt.  
+Nous utilisons un fichier dit "maitre" comme matrice de base pour générer le cours. La syntaxe employée est basée sur le format **MarkDown**. Vous pourrez observer l'usage de ce format dans la video de cette section de cours. 
 
-Les bases de données relationnelles sont encore aujourd'hui incontournables et sont au coeur de nombreux logiciels très répandues comme WordPress, Drupal, WikiMedia, etc. et au coeur de nombreux sites web (libération.fr, tous les blogs, wikipedia.org, etc.). Cependant, de nouveaux formats et technologies de base de données sont apparues dans les années 90 afin d'optimiser la "portabilité" des données, c'est à dire le transfert aisé d'un serveur à un autre: XML, JSON, etc. Nous allons voir que ces formats de données plus statiques sont utilisés pour diffuser des données, dans un mouvement encore en plein essor l'OPEN DATA.
+Pour permettre de prendre en compte les spécificités d'un contenu de cours destiné à être publié en ligne ou au sein de plateforme de Mooc ou de eLearning, nous avons étendu la syntaxe Markdown. Ces ajouts consistent en des conventions décrites ci-dessous et reprennent également les extensions proposées par la [librairie Python de MarkDown](https://pythonhosted.org/Markdown/extensions). 
 
-## Collecter et représenter les données
+### Structure globale d'un cours Culture Numérique
+Un cours se décompose en sections et sous-sections. Le niveau sous-sections constitue le niveau "pivot" de la structure d'un cours Culture NUmérique. Chaque sous-section peut être du type et de la forme suivante:  
 
-### Exemples de jeux de données
+1. élément de cours simple (texte + images)  
+2. élément de cours incluant une ou plusieurs animations (vidéo) accompagnées à chaque fois par la version texte lisible en mode _zen_ 
+1. auto-évaluation sous forme de quiz 
+2. exercice d'approfondissement incluant un énoncé (texte riche) et un espace pour fournir une réponse sous forme de texte libre
 
-Exploration des différents jeux de données disponibles: sites institutionnels, opendata, etc. 
+### Sous-section de cours simple
 
-- [**Data.Gouv.Fr**](https://www.data.gouv.fr). Exemples:  
-- Répartition géographique des contribuables de l'Impot sur les grandes Fortunes [ISF en France](https://www.data.gouv.fr/fr/datasets/impot-de-solidarite-sur-la-fortune/)  
-- Résultats des élections: [Présidentielles 2012](https://www.data.gouv.fr/fr/datasets/election-presidentielle-2012-resultats-572126/), Départementales, etc.  
+Rédigée en MarkDown, c'est un type de sous-section simple consistant en du texte mis en forme et enrichi d'images. 
+Par rapport au MArkdown simple, nous utilisons les fonctions supplémentaires décrites ci-après.
+
+#### ajouter des classes CSS 
+
+Avec des [Attribute list](https://pythonhosted.org/Markdown/extensions/attr_list.html): Pour permettre d'ajouter des classes CSS à une image ou à un bloc de texte, pour permettre une mise en page enrichie.
+Un exemple pour ajouter un attribut en ligne à un lien:  
+`[link](http://example.com){: class="foo bar" .titre title="Some title!" }`  
+qui produit le HTML suivant:  
+`<p><a href="http://example.com" class="foo bar titre" title="Some title!">link</a></p>`  
+
+Notez que pour ajouter des classes on peut soit spécifier `.une_classe` ou `class='une_classe``
+
+#### Commentaires invisibles
+En utilisant simplement les commentaires HTML:
+    
+        <!-- On pourrait aussi mentionner les lol cats dans cette section non ? -->
+
+Le commentaire suivant ne sera donc pas visible dans le rendu HTML final.
+<!-- Il faudrait vraiment enrichir cette documentation de quelques Gifs animés -->        
+
+### Sous-section de cours avec animations vidéo
+Ces éléments de cours consistent en des sous-sections pouvant inclure 1 ou plusieurs vidéos d'animations. Ici il y a 2 étapes:  
+- a) avant la réalisation des vidéos, on ajoute des blocs 'Idée animation' pour décrire ce que pourrait contenir l'animation qui sera intégrée par la suite
+- b) une fois la vidéo réalisée, on intègre le lien de la vidéo qui sera ensuite intégrée via une iframe dans la sous-section de cours
+
+####a) Notes pour idées d'animation
+On utilise ici le principe natif de block quote Markdown avec un `>` en début de paragraphe:
+```    
+> [Animation] Peut être des lettres simples en suite de 0 et de 1, et des
+compositions en mots/composition de suites de 0 et 1...  est-ce
+qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
+```
+Qui produira ce résultat:
+
+> [Animation] Peut être des lettres simples en suite de 0 et de 1, et des
+compositions en mots/composition de suites de 0 et 1...  est-ce
+qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
+
+**NB** Si le mot clé `[Animation]` n'est pas inclu, le bloc sera toujours interprété comme bloc idée d'animation.
+
+####b) Lien vers une vidéo d'animation
+Sur le même principe que les *attribute lists* (cf ci-dessus), on spécifie qu'il s'agit d'un lien vers une vidéo en spécifiant la classe `lien_video`:  
+
+```
+    [Introduction au web](https://player.vimeo.com/video/138623497){: .lien_video } 
+
+ou  
+
+    [Introduction au web](https://player.vimeo.com/video/138623497){: class="lien_video" } 
+```
+
+Ce lien doit être placé à l'intérieur d'une sous-section. Une sous-section peut bien sûr comporter plusieurs vidéos. 
+
+Ces liens vidéos font l'objet d'un traitement spécifique selon le type d'export:
+* export Site Vitrine HTML: on génère un code d'iframe qui permet de lire le/les vidéo/s sans quitter la page courante; le texte de la sous-section est quant à lui offert en parallèle en mode "zen" activé au click sur la vignette à côté des vidéos (cf image ci-dessous).
+![video_site_vitrine](media/vue_web_cours.png)
+* pour l'export Moodle/IMSCC, le lien est simplement reformaté pour respecter le format `http://vimeo.com/video_id` qui permet au plugin Viméo de Moodle de transformer le lien vidéo en iframe automatiquement:
+![video_moodle](media/3.vue_cours_avec_video.png)
+
+
+
+## Comment ajouter des sous-sections `Activités`
+
+Les activités peuvent être de 2 types:
+
+- auto-évaluation: `activité`
+- Exercices d'approfondissement: `activité-avancée`
+Pour le découpage des activités, nous n'utilisons plus les `##` de la syntaxe markdown, mais les "fenced code blocks" en spécifiant le type d'activité  juste à côté des "backticks" ````activité`
+
+### Syntaxe GIFT
+
+Ces activités sont rédigées en GIFT; chaque question est séparée par une ligne vide. La syntaxe Gift a été proposé par l'équipde Moodle pour permettre de gagner du temps dans la rédaction de quizz et de tests. Cette syntaxe est disponible sur [cette page](https://docs.moodle.org/28/en/GIFT_format). Il s'agit d'un format "texte" qui peut s'éditer dans n'importe quel "éditeur de texte" (et non dans un "traitement de texte").
  
-- [Etude sur la consommation de traitements contre la dysfonction érectile](https://www.data.gouv.fr/fr/datasets/etude-sur-la-consommation-de-traitements-contre-la-dysfonction-erectile/)
-- [DataFrance](http://datafrance.info/?utm_source=datagouv&utm_medium=datagouv&utm_campaign=reuse-global)  
-- [**OPenData.EU**](https://open-data.europa.eu) 
-- **Sncf**: https://ressources.data.sncf.com/explore/  
-Exemples:[Satisfaction Clients dans les gares](https://ressources.data.sncf.com/explore/dataset/barometre-client/?tab=metas), [Pianos dans les gares](https://ressources.data.sncf.com/explore/dataset/gares-pianos/)  
+Exemple:
 
-- **Nord - Pas de Calais** : http://opendata.nordpasdecalais.fr/  
-donnnées "sociales" intéressantes par ex. [Développement Humain communal (IDH-4) pour l'année 2009](http://opendata.nordpasdecalais.fr/dataset/indicateur-de-developpement-humain-communal-idh-4-en-2009/resource/e0efab89-5e40-4d59-8b78-280a3edcff47)
-- **Ville d'Issy les Moulinaux** : https://data.issy.com  
+        ```activité-avancée
+        
+        ::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples:: {
+        #### Le genre, la date de création, ...
+        }
+        
+        ::Fonctionnalités d'un éditeur de textes::
+        [html]<p>Parmi les  fonctionnalités suivantes, lesquelles sont possibles ?
+        </p>
+        {
+        ~%25%copier/couper/coller#tous les éditeurs le permettent
+        ~%25%rechercher et remplacer#très souvent disponible
+        ~%25%avancer de mots en mots#souvent par la conjonction CRTL-flèches
+        ~%25%corriger l'orthographe#certains le font
+        ~%-100%mettre en gras#l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
+        }
+        ```
 
-- [**INSEE**](http://www.insee.fr/fr/bases-de-donnees/): stat globales, données démographiques, stats économiques, etc.
 
-- Données "citoyennes" [NosDonnées.fr](http://www.nosdonnees.fr/dataset)
+ 
+## Exemples d'activité
 
-Différents formats sont utilisés dans le domaine de l'OpenData. NOus avons vu ensemble cette séance.
+Dans les sous-sections suivantes, retrouvez une série d'exemple d'activités des 2 types (simple et avancées.). N'hésitez-pas à vous inspirer de ces exemples et à les prendre comme point de départ pour créer vos propres contenus.
 
-### le .CSV (Comma Separated Value)
+```comprehension
+::Représenter et manipuler::
+[markdown]
+**Représenter et manipuler**
+Les traitements possibles dépendent fortement des choix de représentation
+{T}
 
-C'est un format texte, i.e ouvrable dans n'importe quel bon éditeur texte puisqu'il n'inclue pas de mise en forme à la différence des formats   traitement de text (ODT, DOC, etc). Un fichier CSV est essentiellement un tableau dans lequel:
+::Quelles données ?::
+[markdown]
+**Quelles données ?**
+La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples.
+{#### Le genre, la date de création, l'éditeur, ...}
 
-- les valeurs pour les différentes colonnes sont séparés par un signe que l'on choisit la 1ère fois que l'on enregistre le fichier. Un conseil: éviter de choisir la `,` car en France c'est le signe qui sépare les décimales des nombres, donc il y a risque de se retrouver avec 2 colonnes différentes pour les entiers et le décimales d'un nombre à virgule, ex: 12,5 => 12 et 5 dans 2 colonnes séparées. Un signe couramment employé est le `;` ou la tabulation 
-- la 1ère ligne donne le nom des colonnes  
+::De la variété ?::
+[markdown]
+**De la variété ?**
+Il n'existe qu'une seule façon de représenter numériquement un livre.
+{F #Représenter une information est le résultat de nombreux choix}
 
-### le .XLS: 
+::Comment choisir ?::
+[markdown]
+**Comment choisir ?**
+Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique.
+{#### la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...}
 
-Le format Excel pour un tableur est très diffusé. Attention il faut très souvent retraiter ce format et extraire les données des feuillets en autant de fichier .CSV pour une exploitation des données.
+::Qui choisit ? ::
+[markdown]
+**Qui choisit ?**
+Les choix de représentations sont faits par
+{
+~Les informaticiens #non pas seuls car intervient aussi l'utilisation métier des objets représentés
+~Les experts métier #non pas seuls car il faut des spécialistes des données numériques et des algorithmes
+=Les deux #oui et souvent aussi des chercheurs, des entreprises, ...
+}
+```
 
-### JSON
-le .JSON: c'est le format d'échange de données sur le Web par excellence. C'est un format texte utilisable par des "machines" qui sertà stocker les données sous forme "d'objets" ayant différents "champs" décrivant les propriétés de chaque item. La grande différence avec les tableaux c'est qu'un champ peut être décrit avec plusieurs "sous-champs", ce qui se traduit plus difficilement avec un tableau.  
-
-Nous verrons par la suite d'autres formats courants, notamment ceux dédiés aux donnés géoréférencées.  
-
-## Application : Manipuler les données avec CartoDB
-
-[Préparer un CSV pour CartoDB](https://player.vimeo.com/video/100105203){: .lien_video }
-
-Regarder ce tutoriel [Préparer un CSV pour CartoDB](https://player.vimeo.com/video/100105203)
- sur l'utilisation de la plateforme [CartoDB.com](https://cartodb.com/)
-
-## Exercice sur machine
-
-Suivez les étapes ci-dessous et répondez aux questions ci-après.
-
-- aller suur cartodb.com
-- se creer un compte
-- aller sur https://ressources.data.sncf.com
-- récupérer le jeu de données "Baromètre satisfaction client en gare"
-- ouvrir le fichier excel, récupérer (c/c) les valeurs des 2 colonnes : nom de la gare, valeur de satisfaction globale
-- créer un fichier csv et y coller ces 2 col. 
-- récupérer le fichier "referentiel gare voyageurs" sur data.sncf.com
-- normalement le fichier est géocodé par rapport à la colonne "commune", sinon, le faire manuellement en cliquant sur le bouton orange "geo" a côté de la colonne the_geom
-- opérer la fusion des 2 datasets ainsi créés en choisissant pour chaque jeus de données la colonne donnant le nom des gares
-- une fois la fusion effectuée, faite la requête SQL permettant de ne voir que les gares qui ont un chiffre de satisfaction:  
-`
-SELECT * FROM voyageurs_merge WHERE satisfaction_globale IS NOT NULL
-`
-```activite
-::Questions::[markdown]Après avoir suivi les étapes, répondez aux questions suivantes:
-- Renseignez le lien vers la cartographie que vous avez réalisée, puis répondez aux questions suivantes:
-- Trouver des représentations qui permettent de visualiser instantanément les gares ayant le meilleure indice de satisfaction. inspecter les résultat, et compter combien de résultats sont affichés par rapport aux nombres de gares pour lesquelles vous avez un chiffre de satisfaction. 
-- Que constatez-vous ? Pourquoi ? (aidez-vous de requêtes SQL pour compter les résultats)
+```activité
+::Une tâche complexe::
+[markdown]
+**Une tâche complexe**
+Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium). Répondez aux questions suivantes :
+- Quelle est l'origine de `HTML` ?
+- Qui développe et publie les spécifications `HTML` depuis 1995 ?
+- Quelle est la version la plus récente de `HTML` et son année de parution ?
+- Qui participe au développement du standard `HTML` au `W3C` ?
+- Quelles sont les étapes pour arriver à être une recommandation ?
+- Qui est responsable du standard `css` pour les feuilles de style ?
+{#### origine au CERN ; Le W3C développe le HTML depuis 1995 ; HTML5 en 2014 ; industriels, éditeurs logiciels, chercheurs, entreprises du Web, ... ; brouillon, appel, candidat, proposition et recommandation ; le W3C.}
 ```
 
 
