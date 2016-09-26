@@ -159,7 +159,7 @@ Ingrédients:
 
 # Exemples d'activité
 
-Dans les sous-sections suivantes, retrouvez une série d'exemple d'activités des 2 types (simple et avancées.). N'hésitez-pas à vous inspirer de ces exemples et à les prendre comme point de départ pour créer vos propres contenus.
+Dans les sous-sections suivantes, retrouvez une série d'exemple d'activités des 2 types (simple et avancées.). N'hésitez-pas à vous inspirer de ces exemples et à les prendre comme point de départ pour créer vos propres quiz et activités.
 
 ```comprehension
 ::Représenter et manipuler::
