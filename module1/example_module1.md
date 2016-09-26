@@ -17,7 +17,7 @@ Nous détaillons ici la chaine éditoriale adoptée pour la production des modul
 Nous utilisons un fichier dit "maitre" comme matrice de base pour générer le cours. La syntaxe employée est basée sur le format MarkDown, que nous avons étendu pour nos besoins spécifiques. Ces ajouts consistent en des conventions décrites ci-dessous et l'usage d'extensions proposées par la [librairie Python de MarkDown](https://pythonhosted.org/Markdown/extensions).
 
 
-### Structure globale d'un cours Culture Numérique
+## Structure globale d'un cours Culture Numérique
 Un cours se décompose en sections et sous-sections. Le niveau sous-sections constitue le niveau "pivot" de la structure d'un cours Culture NUmérique. Chaque sous-section peut être du type et de la forme suivante:  
 
 1. cours simple (texte + images)  
@@ -30,13 +30,13 @@ Un cours se décompose en sections et sous-sections. Le niveau sous-sections con
 RMQ: les 2 derniers types d'exercice incluent un énoncé (texte riche) et un espace pour fournir une réponse sous forme de texte libre
 
 
-### Cours simple
+## Cours simple
 
 Rédigée en MarkDown, c'est un type de sous-section simple consistant en du texte mis en forme et enrichi d'images.
 Par rapport au MArkdown simple, nous utilisons les fonctions supplémentaires décrites ci-après.
 
 
-#### ajouter des classes CSS
+### ajouter des classes CSS
 
 Avec des [Attribute list](https://pythonhosted.org/Markdown/extensions/attr_list.html): Pour permettre d'ajouter des classes CSS à une image ou à un bloc de texte, pour permettre une mise en page enrichie.
 Un exemple pour ajouter un attribut en ligne à un lien:  
@@ -47,7 +47,7 @@ qui produit le HTML suivant:
 Notez que pour ajouter des classes on peut soit spécifier `.une_classe` ou `class='une_classe``
 
 
-#### Commentaires invisibles
+### Commentaires invisibles
 En utilisant simplement les commentaires HTML:
 
         <!-- On pourrait aussi mentionner les lol cats dans cette section non ? -->
@@ -83,7 +83,7 @@ et non
 
 La 2e forme est celle du champ "src" des iframes vimeo, mais l'API Vimeo requiert la 1ère forme, et qui est le lien permettant de plus d'accéder à la page vimeo de la video, et donc d'accéder à la chaine, aux autres videos, de liker, partager, etc.
 
-### Sous-sections d'activités
+## Sous-sections d'activités
 
 Les activités peuvent être de 3 types:
 
@@ -104,7 +104,7 @@ ou
         ```
 
 
-#### Syntaxe GIFT
+### Syntaxe GIFT
 
 Ces activités sont rédigées en GIFT; chaque question est séparée par une ligne vide. La syntaxe Gift a été proposé par l'équipde Moodle pour permettre de gagner du temps dans la rédaction de quizz et de tests. Cette syntaxe est disponible sur [cette page](https://docs.moodle.org/28/en/GIFT_format). Il s'agit d'un format "texte" qui peut s'éditer dans n'importe quel "éditeur de texte" (et non dans un "traitement de texte").
 
@@ -128,7 +128,7 @@ Exemple:
         }
         ```
 
-#### HTML et MarkDown dans les questions rédigées en GIFT
+### HTML et MarkDown dans les questions rédigées en GIFT
 
 Dans les questions rédigées en GIFT il est possible de rédiger le texte au format HTML ou Markdown en spécifiant devant chaque bloc la syntaxe (voir explications à la fin de [ce paragraphe de la documentation Moodle sur le format GIFT](https://docs.moodle.org/28/en/GIFT_format#Percentage_Answer_Weights)).
 
