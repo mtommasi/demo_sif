@@ -1,5 +1,5 @@
 TITLE: Module de cours test 1
-MENUTITLE: Module 1
+MENUTITLE: Module Test 1
 AUTHOR: Culture Numérique
 LANGUAGE: fr
 
@@ -11,7 +11,7 @@ _Exemple de cours rédigé en utilisant la syntaxe MarkDown et suivant la conven
 
 ## Syntaxe pour éditer un contenu de cours Esc@Pad
 
-[video]( https://player.vimeo.com/video/93350435 ){: .lien_video }
+[video]( https://vimeo.com/93350435 ){: .cours_video }
 
 Nous détaillons ici la chaine éditoriale adoptée pour la production des modules mis à dispositions sur ce dépôt.  
 Nous utilisons un fichier dit "maitre" comme matrice de base pour générer le cours. La syntaxe employée est basée sur le format MarkDown, que nous avons étendu pour nos besoins spécifiques. Ces ajouts consistent en des conventions décrites ci-dessous et l'usage d'extensions proposées par la [librairie Python de MarkDown](https://pythonhosted.org/Markdown/extensions).
@@ -157,7 +157,7 @@ Ingrédients:
 </ul>
 ```
 
-## Exemples d'activité
+# Exemples d'activité
 
 Dans les sous-sections suivantes, retrouvez une série d'exemple d'activités des 2 types (simple et avancées.). N'hésitez-pas à vous inspirer de ces exemples et à les prendre comme point de départ pour créer vos propres contenus.
 
