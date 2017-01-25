@@ -1,3 +1,47 @@
+TITLE: Démonstration
+MENUTITLE: Démo 
+
+# Informatique et numérique
+
+[Informatique et numérique](https://vimeo.com/122104210){: .cours_video }
+
+À l'origine, les ordinateurs étaient réservés...
+
+# Des titres
+
+## Des soustitres
+
+Des textes en `markdown` avec _accentuation_ plus ou moins *forte*, 
+des listes,...
+
+- d'items 
+- c'est bien suffisant. 
+
+```activité
+::Le jardin zen::
+[markdown]
+Pour illustrer à la fois la pertinence de séparer les informations de 
+présentation des autres informations textuelles, mais aussi l'effort 
+de la communauté dans cette direction notamment avec les feuilles de 
+style (CSS ou de documents de traitement de textes).  Regardez ces 
+différents liens sur le site la beauté des CSS :
+\n
+- [http://www.csszengarden.com/tr/francais/](http://www.csszengarden.com/tr/francais/)
+- [http://www.csszengarden.com/tr/fr/221/](http://www.csszengarden.com/tr/fr/221/)
+- [http://www.csszengarden.com/tr/fr/219/](http://www.csszengarden.com/tr/fr/219/)
+\n
+Entre ces différents designs, qu'est-ce qui change ?
+{
+~%0% La structure #non, elle reste la même, vérifiez l'identité des codes HTML 
+     avec l'affichage du code (`CTRL-U` sur *PC*, `cmd-U`sur *Mac*)
+~%0% Le contenu #non, lisez bien, les textes sont les mêmes!
+~%100% La présentation #oui uniquement la CSS qui ne contient que des éléments 
+    de présentation est adaptée.
+}
+
+::autre question::
+C'est beau non ? {T}
+``` 
 
 # Comment utiliser Esc@Pad pour produire un support de cours multi-plateformes
 
