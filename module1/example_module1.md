@@ -15,6 +15,7 @@ Des textes en `markdown` avec _accentuation_ plus ou moins *forte*,
 des listes,...
 
 - d'items 
+- un second item
 - c'est bien suffisant. 
 
 ```activité
